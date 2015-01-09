@@ -1,11 +1,8 @@
 ###AngularJS Demo
 ================
 
-##DEMO project to illustrate services and it's Implementation
+##DEMO project to illustrate fundamentals of AngularJs - scope,data binding,controllers,etc.
 --------------------------------------------------------------------
-This Demo project illustrate angularJS service and way to implement service using
-simply $http  or by using deferred  , handling  promises.
-
 ==================
 Technolgy Used
 ==================
@@ -22,7 +19,7 @@ Technolgy Used
 **Steps to run Client**
 ---------
 1. Clone the repository using following command
-```git clone git@github.com:Gauravkr/AngularJSDemo.git```
+```git clone git@github.com:supriyagadre118/angular-learning.git```
 2. Navigate to the 'AngularJSDemo' directory and run following commands
 ```
 	   a. npm install  OR sudo npm install
