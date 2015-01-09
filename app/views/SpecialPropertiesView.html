@@ -1,0 +1,23 @@
+<div ng-init="names=['A','B','C','D','E']">
+    <ul>
+
+
+            value
+            index
+            first
+            middle
+            last
+            even
+            odd
+
+        <li ng-repeat="x in names">
+            {{ x }}
+            {{$index}}
+            {{$first}}
+            {{$middle}}
+            {{$last}}
+            {{$even}}
+            {{$odd}}
+        </li>
+    </ul>
+</div> 

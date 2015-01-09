@@ -1,0 +1,25 @@
+<div>
+    <p>The $scope object lifecycle has four distinct stages:</p>
+    <ol>
+        <li>
+            <b>Creation</b>
+            <br>
+            When a controller or directive is created, Angular creates a new scope for us and passes this on to the new scope when it runs the controller constructor function at runtime.
+        </li>
+        <li>
+            <b>Linking</b>
+            <br/>
+            When angular start running, all of the $scope objects are attached or linked to the view. All functions that create $scope objects attach themselves to the view as well. These scopes will register functions that run when things change in the context of the angular app.
+        </li>
+        <li>
+            <b>Updating</b>
+            <br/>
+            When the event loop is running, which usually executes on the top-most $scope object (called the $rootScope), every child scope performs it’s own dirty checking. Every watch function is checked for changes. If any changes are detected, then the $scope object will fire the callback.
+        </li>
+        <li>
+            <b>Destruction</b>
+            <br/>
+            When a $scope object is no longer needed in the view, the scope itself will be cleaned up and destroyed using a method on the $scope called: $destroy()
+        </li>
+    </ol>
+</div>

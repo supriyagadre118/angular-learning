@@ -1,0 +1,12 @@
+<div>
+    <p><h4>Explaining ng-repeat</h4></p>
+    <p><h6>ng-repeat will iterate over the array called "names" and create the element</h6></p>
+    <!--ng-repeat will iterate over the array called "names"-->
+    <div ng-init="names=['C','C++','Java','JavaScript','Scala','Ruby on Rails','Objective C']">
+        <ul class="set-width">
+            <li class="list-group-item" ng-repeat="name in names">
+                {{ name }}
+            </li>
+        </ul>
+    </div>
+</div>

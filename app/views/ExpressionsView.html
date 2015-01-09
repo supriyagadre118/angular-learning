@@ -1,0 +1,21 @@
+<h3 id="angular-expressions" class="ng-scope">Angular Expressions</h3>
+<p class="ng-scope">Angular expressions are JavaScript-like code snippets that are usually placed in bindings such as
+    <br/>
+    <code><span class="pun">{{</span><span class="pln"> expression </span><span class="pun">}}</span></code>.</p>
+<p class="ng-scope">For example, these are valid expressions in Angular:</p>
+
+<ul class="ng-scope">
+    <li><code><span class="lit">1</span><span class="pun">+</span><span class="lit">2</span></code></li>
+    <li><code><span class="pln">a</span><span class="pun">+</span><span class="pln">b</span></code></li>
+    <li><code><span class="pln">user</span><span class="pun">.</span><span class="pln">name</span></code></li>
+    <li><code><span class="pln">items</span><span class="pun">[</span><span class="pln">index</span><span class="pun">]</span></code></li>
+</ul>
+
+<div ng-init="quantity=5;cost=30; student={firstname:'ABC',rollno:101};marks=[80,90,75,73,60]">
+    <p>Enter name : <input type="text" ng-model="student.firstname"/></p>
+    <p>Hello {{student.firstname}}!</p>
+    <p>Enter price and quantity</p>
+    <p>Expense on Books : <input type="text" ng-model="cost"/> * <input type="text" ng-model="quantity"/> =  Rs. {{cost*quantity}}</p>
+    <p>Enter roll no - <input type="text" ng-model="student.rollno"/></p>
+    <p>Roll No: {{student.rollno}}</p>
+</div>

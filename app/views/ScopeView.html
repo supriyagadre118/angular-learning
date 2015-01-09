@@ -1,0 +1,14 @@
+<div>
+    <p><h4>Explaining $scope and $rootScope</h4></p>
+    <p> The 'color' variable is a property of the containing $rootscope i.e. app </p>
+    <p>Sunflower is <input type="text" ng-model="color"/> in color. </p>
+
+    <div ng-controller="SkyController">
+        <p> The 'color' variable is a property of the containing $scope i.e, SkyController </p>
+        <p>The sky is <input type="text" ng-model="color"> in color. </p>
+    </div>
+    <div ng-controller="SunController">
+        <p> SunController doesn't have 'color' property in its local scope hence it looks for the same in its parent scope </p>
+        <p>The sun is <input type="text" ng-model="color"> in color. </p>
+    </div>
+</div>
