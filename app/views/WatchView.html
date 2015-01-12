@@ -1,9 +1,19 @@
+<div>
+    <h3><b>$watch</b></h3>
+    <p>
+        AngularJS will account for only those model changes which are done inside AngularJS’ context
+        (i.e. the code that changes models is wrapped inside $apply()).
+        Angular’s built-in directives already do this so that any model changes you make are reflected in the view.
+        However, if you change any model outside of the Angular context,
+        then you need to inform Angular of the changes by calling $apply() manually.
+        It’s like telling Angular that you are changing some models and it should fire the watchers so that your changes propagate properly.
+        For example, if you use JavaScript’s setTimeout() function to update a scope model,
+        Angular has no way of knowing what you might change.
+        In this case it’s your responsibility to call $apply() manually, which triggers a $digest cycle.
+        Similarly, if you have a directive that sets up a DOM event listener and changes some models inside the handler function, you need to call $apply() to ensure the changes take effect.
+        Suppose you have a page, and once the page loads you want to display a message after a some seconds delay.
+    </p>
+</div>
 <div ng-controller="WatchController">
-    <p><h4>Explaining $watch</h4></p>
-
-    <input ng-model="expr"
-           type="text"
-           placeholder="Enter an expression" />
-    <h2>{{ parsedValue }}</h2>
-
+    <h3><b>Delayed Message: {{message}}</b></h3>
 </div>

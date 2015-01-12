@@ -1,0 +1,45 @@
+<div> <h3><b>$injector</b></h3>
+    <p>
+        Angular uses the value of the ng-app directive to configure the $injector service .
+        The $injector is responsible for handling all instantiations of our Angular components, including our app modules, directives, controllers, etc.
+
+        Behind the scenes, the Angular process looks like:
+
+        1. Load the app with the injector -
+        var injector = angular.injector(['ng', 'myApp']);
+        2. Load the $controller service with the injector -
+        var $controller = injector.get('$controller');
+        var scope = injector.get('$rootScope').$new();
+        3. Load the controller, passing in a scope which is how angular does it at runtime -
+        var MyController = $controller('MyController', {$scope: scope}) ;
+    </p>
+</div>
+<br/>
+<div> <h3><b>$compile</b></h3>
+    <p>
+        The $compile service traverses the DOM and collects all of the directives that it finds.
+        It then combines all of their linking functions into a single linking function.
+        This linking function is then used to link the compiled template to the $rootScope (the scope attached to the ng-app DOM element).
+        It finds the directives in the DOM by looking through the attributes, comments, classes, and the DOM element name.
+        The $compile service walks the DOM tree looking for DOM elements with directives declared on them.
+        When it encounters a DOM element with one or more directives,
+        it orders the directives (based upon their priority),
+        then uses the $injector service to find and collect the directive’s compile function and execute it.
+    </p>
+</div>
+<br/>
+<div><h3><b>$apply</b></h3>
+    <p>
+        $scope.$apply() takes a function or an Angular expression string, and executes it, then calls $scope.$digest() to update any bindings or watchers.
+        As a result of this, a digest cycle starts at the $rootScope, and subsequently visits all the child scopes calling the watchers along the way.
+    </p>
+</div>
+<br/>
+
+<div>
+    <p>Please see the javascript browser console...</p>
+</div>
+
+<input ng-model="name" type="text" ng-init="name='Supriya'">
+<h1>Hello {{ name }}</h1>
+

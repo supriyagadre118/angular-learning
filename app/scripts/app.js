@@ -35,6 +35,41 @@
       .when('/expressions', {
         templateUrl: 'views/ExpressionsView.html'
       })
+      .when('/digestCycle', {
+        templateUrl: 'views/DataBindingView.html',
+        controller : 'DataBindingController'
+      })
+      .when('/$injector', {
+        templateUrl: 'views/DataBindingView.html',
+        controller : 'DataBindingController'
+      })
+      .when('/$compile', {
+        templateUrl: 'views/DataBindingView.html',
+        controller : 'DataBindingController'
+      })
+      .when('/$apply', {
+        templateUrl: 'views/DataBindingView.html',
+        controller : 'DataBindingController'
+      })
+      .when('/$watch', {
+        templateUrl: 'views/WatchView.html'
+      })
+      .when('/dirtyChecking', {
+        templateUrl: 'views/DataBindingView.html',
+        controller : 'DataBindingController'
+      })
+      .when('/simpleController', {
+        templateUrl: 'views/SimpleControllersView.html',
+        controller : 'SimpleController'
+      })
+      .when('/nestedController', {
+        templateUrl: 'views/NestedControllersView.html',
+        controller : 'firstControllerScope'
+      })
+      .when('/scopeInheritance', {
+        templateUrl: 'views/ScopeInheritanceView.html',
+        contoller : 'scopeInheritance'
+      })
       .when('/log', {
         templateUrl: 'views/LogView.html',
         controller: 'LogController'
