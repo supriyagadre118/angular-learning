@@ -84,6 +84,10 @@
       .when('/specialProperties', {
         templateUrl: 'views/SpecialPropertiesView.html'
       })
+      .when('/filter', {
+        templateUrl: 'views/FilterView.html'
+      })
+
       .otherwise({
         redirectTo: '/'
       });
