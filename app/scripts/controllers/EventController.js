@@ -3,6 +3,6 @@
  */
 app.controller('EventController',function($scope){
   $scope.clickMe=function($event) {
-    console.log($event);
+    console.log();
   }
 });

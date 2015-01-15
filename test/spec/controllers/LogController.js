@@ -1,22 +1,22 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: LogController', function () {
 
   // load the controller's module
   beforeEach(module('angularLearningProjectApp'));
 
-  var MainCtrl,
+  var LogController,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    LogController = $controller('LogController', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should display proper msg on console', function () {
+    expect(scope.message).toBe('Hello Angular World!');
   });
 });

@@ -87,6 +87,10 @@
       .when('/filter', {
         templateUrl: 'views/FilterView.html'
       })
+      .when('/unitTesting', {
+        templateUrl: 'views/TestView.html',
+        controller : 'TestController'
+      })
 
       .otherwise({
         redirectTo: '/'
